@@ -1,0 +1,138 @@
+{
+  "project_name": "Touch2Sign",
+  "theme": "light",
+  "style": "clean legal-corporate, enterprise-trustworthy, minimal enterprise UI",
+  "typography": {
+    "strategy": "Old Money Tech / Corporate SaaS - Authoritative but clean.",
+    "headings": {
+      "family": "Chivo, sans-serif",
+      "weights": ["400", "700", "900"],
+      "usage": "Use for all H1-H4. Emphasize clarity and authority. Avoid generic Inter/Roboto.",
+      "tracking": "tracking-tight"
+    },
+    "body": {
+      "family": "IBM Plex Sans, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for body text, form inputs, and app data tables.",
+      "tracking": "tracking-normal"
+    },
+    "mono": {
+      "family": "IBM Plex Mono, monospace",
+      "usage": "Use for document IDs, audit trail hashes, and technical compliance references."
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F8FAFC",
+      "tertiary": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "tertiary": "#64748B",
+      "inverse": "#FFFFFF"
+    },
+    "brand": {
+      "navy": "#0A192F",
+      "cobalt": "#1D4ED8",
+      "accent": "#3B82F6"
+    },
+    "status": {
+      "success": "#059669",
+      "success_bg": "#D1FAE5",
+      "warning": "#D97706",
+      "warning_bg": "#FEF3C7",
+      "error": "#DC2626",
+      "error_bg": "#FEE2E2",
+      "info": "#2563EB",
+      "info_bg": "#DBEAFE"
+    },
+    "border": {
+      "light": "#E2E8F0",
+      "default": "#CBD5E1"
+    }
+  },
+  "surface_strategy": {
+    "cards": "Sharp outlined cards with subtle shadows. Use `border border-slate-200 bg-white shadow-sm rounded-lg`. Do not use heavy drop shadows.",
+    "app_shell": "Minimalist enterprise. Sidebar should have `bg-slate-50 border-r border-slate-200`. Topbar `bg-white border-b border-slate-200`.",
+    "marketing_header": "Crystal Glass or Solid. `bg-white/90 backdrop-blur-md border-b border-slate-200`. No pure transparent headers."
+  },
+  "spacing_and_layout": {
+    "marketing": "Generous spacing. Sections should use `py-24` or `py-32`. Containers use `max-w-7xl mx-auto px-6 lg:px-8`.",
+    "app": "Dense and highly legible. Use `p-6` for dashboard containers, `gap-4` for grids.",
+    "grids": "Use 12-column or bento layouts for marketing. Use strict 3-col or 4-col bento grids for dashboard summary cards."
+  },
+  "component_rules": {
+    "buttons": {
+      "primary": "`bg-blue-700 hover:bg-blue-800 text-white rounded-md px-6 py-2.5 font-medium transition-colors`",
+      "secondary": "`bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-md px-6 py-2.5 font-medium transition-colors`"
+    },
+    "badges": {
+      "compliance": "Subtle pill. `bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase`",
+      "status": "Color-coded pills (e.g., Draft = Gray, Sent = Blue, Signed = Green). Use background tints and dark text."
+    },
+    "tables": "Clean, unboxed tables. `w-full text-left border-collapse`. Header row `border-b-2 border-slate-200 text-sm font-semibold text-slate-500`. Rows `border-b border-slate-100 hover:bg-slate-50 text-sm`.",
+    "forms": "Use Shadcn-style inputs. `border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500`.",
+    "logo": "Placeholder SVG: Shield outline + document + fingerprint inside + straight stylus mark. Navy/Cobalt blue. Text: 'Touch2Sign' in Chivo bold."
+  },
+  "pages_and_features": {
+    "marketing": {
+      "Home": "Hero with 'UK-Compliant eSignatures & Deed Witnessing', 'Book a demo' CTA, 'Sign In' secondary. Followed by Compliance Strip, 3 Pillars, 4-step workflow, and Solutions.",
+      "Features": "Detailed breakdown of deed witnessing, signatures, and transactions.",
+      "Security_Compliance": "Focus on eIDAS QES, UK ECA 2000, UK DIATF, PAdES, SCCR. High trust visuals.",
+      "Solutions": "Grid or tabs for Legal, HR, Operations, Client Agreements, Conveyancing, Estate Agents, Accountants.",
+      "Pricing": "Sample tier plans (Starter, Business, Enterprise) with feature checklist (Pricing option b).",
+      "Contact": "Form: name, work email, company, team size, message."
+    },
+    "app": {
+      "Dashboard": "Summary cards (Documents, Pending Signatures, Verifications, Completed), recent documents table, activity feed.",
+      "Documents": "List/table with status badges (Draft, Sent, Signed, Witnessed, Archived), action buttons.",
+      "Signatures": "Workflows view. Kanban or list style tracking.",
+      "Identity_Verification": "Verification requests with OneID-style statuses.",
+      "Settings": "Organization profile, team members, permissions."
+    }
+  },
+  "image_urls": {
+    "hero_office": {
+      "url": "https://images.unsplash.com/photo-1640122599744-5ba4f295bc97?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxsYXd5ZXIlMjB0YWJsZXQlMjBzaWduaW5nJTIwb2ZmaWNlfGVufDB8fHx8MTc4MzYwMjQ4NXww&ixlib=rb-4.1.0&q=85",
+      "description": "Lawyer signing on tablet. Use for Hero section or Home page."
+    },
+    "digital_signature": {
+      "url": "https://images.unsplash.com/photo-1763729805496-b5dbf7f00c79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxkaWdpdGFsJTIwc2lnbmF0dXJlJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzgzNjAyNDk1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Close up of digital document signing. Use for Features or 3 Pillars section."
+    },
+    "secure_technology": {
+      "url": "https://images.unsplash.com/photo-1590065707046-4fde65275b2e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxzZWN1cmUlMjBkaWdpdGFsJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3ODM2MDI0ODV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Person using a secure digital screen. Use for Security & Compliance page."
+    },
+    "corporate_meeting": {
+      "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjByZWFsJTIwZXN0YXRlJTIwbWVldGluZ3xlbnwwfHx8fDE3ODM2MDI0ODV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Corporate team meeting. Use for Solutions (Real Estate / HR) section."
+    },
+    "legal_stamp": {
+      "url": "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGxlZ2FsJTIwY29tcGxpYW5jZXxlbnwwfHx8fDE3ODM2MDI0OTV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Wooden stamp on document. Use for Deed Witnessing feature context."
+    },
+    "uk_skyline": {
+      "url": "https://images.unsplash.com/photo-1581279218277-c91af2a501d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxVSyUyMGJ1c2luZXNzJTIwb2ZmaWNlJTIwc2t5bGluZXxlbnwwfHx8fDE3ODM2MDI0ODV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "UK business office skyline. Use for Contact page or Global Solutions background."
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use highly legible, professional icons (e.g., ShieldCheck, FileSignature, Fingerprint, PenTool, Scale, Building, Users). No playful or generic AI emojis."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "NEVER use generic placeholder text or emojis for logos or icons.",
+    "Do not center align app container text. Left-align for natural reading flow.",
+    "Do not apply `transition: all`. Use specific transitions like `transition-colors`, `transition-transform`.",
+    "Add `data-testid` to all interactive and key elements (e.g., `data-testid='login-button'`).",
+    "Implement micro-animations on interactive elements (hover states, slight transforms).",
+    "Use layered z-index hierarchy and avoid pure black or pure grey. Tint greys slightly with blue.",
+    "Ensure marketing sections have high-end padding (p-12 to p-24) to avoid cramped layouts.",
+    "Use Phosphor or Lucide icons, never default emojis.",
+    "Ensure standard contrast ratios (WCAG AA). Avoid low contrast grey text on white backgrounds.",
+    "Create sharp outlined cards with 1px border and very subtle ambient shadows, not harsh drop shadows."
+  ]
+}
