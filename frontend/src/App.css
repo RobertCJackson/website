@@ -1,34 +1,36 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+/* Touch2Sign - global app styles. Most styling is via Tailwind utility classes;
+   keep this file lightweight and focused on cross-cutting concerns. */
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    background-color: #ffffff;
+    color: #0f172a;
 }
 
-.App-link {
-    color: #61dafb;
+/* Sidebar active link indicator */
+.t2s-sidebar-link[data-active="true"] {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-left: 3px solid #1d4ed8;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Sharp outlined card look reused across the app shell */
+.t2s-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+/* Micro-hover on marketing feature cards */
+.t2s-feature-card {
+    transition:
+        transform 200ms ease,
+        border-color 200ms ease,
+        box-shadow 200ms ease;
+}
+.t2s-feature-card:hover {
+    transform: translateY(-2px);
+    border-color: #1d4ed8;
+    box-shadow: 0 6px 18px rgba(29, 78, 216, 0.08);
 }

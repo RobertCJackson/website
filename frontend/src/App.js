@@ -1,51 +1,57 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
+import { Toaster } from "sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import MarketingLayout from "@/components/MarketingLayout";
+import AppShell from "@/components/AppShell";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+import Home from "@/pages/Home";
+import Features from "@/pages/Features";
+import Security from "@/pages/Security";
+import Solutions from "@/pages/Solutions";
+import Pricing from "@/pages/Pricing";
+import Contact from "@/pages/Contact";
+import SignIn from "@/pages/SignIn";
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import AppDashboard from "@/pages/AppDashboard";
+import AppDocuments from "@/pages/AppDocuments";
+import AppSignatures from "@/pages/AppSignatures";
+import AppVerification from "@/pages/AppVerification";
+import AppSettings from "@/pages/AppSettings";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Toaster
+          position="top-right"
+          richColors
+          toastOptions={{
+            classNames: {
+              toast:
+                "!bg-white !text-slate-900 !border !border-slate-200 !shadow-sm",
+            },
+          }}
+        />
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+          {/* Marketing site */}
+          <Route element={<MarketingLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/security" element={<Security />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/signin" element={<SignIn />} />
+          </Route>
+
+          {/* Authenticated app shell (placeholder auth) */}
+          <Route path="/app" element={<AppShell />}>
+            <Route index element={<AppDashboard />} />
+            <Route path="documents" element={<AppDocuments />} />
+            <Route path="signatures" element={<AppSignatures />} />
+            <Route path="verification" element={<AppVerification />} />
+            <Route path="settings" element={<AppSettings />} />
           </Route>
         </Routes>
       </BrowserRouter>
