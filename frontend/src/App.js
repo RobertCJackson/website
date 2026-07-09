@@ -12,6 +12,7 @@ import Solutions from "@/pages/Solutions";
 import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import SignIn from "@/pages/SignIn";
+import Welcome from "@/pages/Welcome";
 
 import AppDashboard from "@/pages/AppDashboard";
 import AppDocuments from "@/pages/AppDocuments";
@@ -44,6 +45,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<SignIn />} />
           </Route>
+
+          {/* Post-payment welcome (standalone, no marketing chrome) */}
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/billing/success" element={<Welcome />} />
 
           {/* Authenticated app shell (placeholder auth) */}
           <Route path="/app" element={<AppShell />}>
