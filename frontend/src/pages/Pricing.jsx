@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Check, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CTASection from "@/components/CTASection";
+import { signupCheckoutUrl } from "@/lib/signflow";
 
 const TIERS = [
   {
@@ -9,7 +10,7 @@ const TIERS = [
     price: "£29",
     unit: "per user / month",
     tag: "For small firms getting started",
-    cta: { label: "Book a demo", href: "/contact" },
+    cta: { label: "Start free trial", external: signupCheckoutUrl("starter") },
     highlight: false,
     features: [
       { label: "Up to 3 users", ok: true },
@@ -26,7 +27,7 @@ const TIERS = [
     price: "£69",
     unit: "per user / month",
     tag: "Most popular — for growing UK teams",
-    cta: { label: "Book a demo", href: "/contact" },
+    cta: { label: "Subscribe now", external: signupCheckoutUrl("business") },
     highlight: true,
     features: [
       { label: "Unlimited users", ok: true },
@@ -178,18 +179,37 @@ const Pricing = () => (
             </ul>
 
             <div className="mt-auto pt-8">
-              <Link to={tier.cta.href} data-testid={`pricing-cta-${tier.name.toLowerCase()}`}>
-                <Button
-                  className={`w-full rounded-md py-2.5 text-sm font-semibold transition-colors ${
-                    tier.highlight
-                      ? "bg-white text-slate-900 hover:bg-slate-100"
-                      : "bg-blue-700 text-white hover:bg-blue-800"
-                  }`}
+              {tier.cta.external ? (
+                <a
+                  href={tier.cta.external}
+                  data-testid={`pricing-cta-${tier.name.toLowerCase()}`}
+                  className="block"
                 >
-                  {tier.cta.label}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+                  <Button
+                    className={`w-full rounded-md py-2.5 text-sm font-semibold transition-colors ${
+                      tier.highlight
+                        ? "bg-white text-slate-900 hover:bg-slate-100"
+                        : "bg-blue-700 text-white hover:bg-blue-800"
+                    }`}
+                  >
+                    {tier.cta.label}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              ) : (
+                <Link to={tier.cta.href} data-testid={`pricing-cta-${tier.name.toLowerCase()}`}>
+                  <Button
+                    className={`w-full rounded-md py-2.5 text-sm font-semibold transition-colors ${
+                      tier.highlight
+                        ? "bg-white text-slate-900 hover:bg-slate-100"
+                        : "bg-blue-700 text-white hover:bg-blue-800"
+                    }`}
+                  >
+                    {tier.cta.label}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
         ))}
