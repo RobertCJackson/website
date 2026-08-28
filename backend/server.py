@@ -84,6 +84,7 @@ def _send_demo_email(payload: "DemoRequestCreate") -> bool:
             f"Work Email: {payload.email}\n"
             f"Company:    {payload.company}\n"
             f"Team Size:  {payload.team_size or '-'}\n"
+            f"Use case:   {payload.use_case or '-'}\n"
             f"Phone:      {payload.phone or '-'}\n\n"
             f"Message:\n{payload.message or '-'}\n"
         )
@@ -95,6 +96,7 @@ def _send_demo_email(payload: "DemoRequestCreate") -> bool:
             <tr><td style="color:#475569;">Work email</td><td><a href="mailto:{payload.email}">{payload.email}</a></td></tr>
             <tr><td style="color:#475569;">Company</td><td>{payload.company}</td></tr>
             <tr><td style="color:#475569;">Team size</td><td>{payload.team_size or '-'}</td></tr>
+            <tr><td style="color:#475569;">Use case</td><td>{payload.use_case or '-'}</td></tr>
             <tr><td style="color:#475569;">Phone</td><td>{payload.phone or '-'}</td></tr>
           </table>
           <p style="margin-top:16px;color:#475569;">Message</p>
@@ -138,6 +140,7 @@ class DemoRequestCreate(BaseModel):
     team_size: Optional[str] = Field(None, max_length=40)
     phone: Optional[str] = Field(None, max_length=40)
     message: Optional[str] = Field(None, max_length=2000)
+    use_case: Optional[str] = Field(None, max_length=80)
 
 
 class DemoRequest(DemoRequestCreate):

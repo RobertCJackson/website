@@ -9,6 +9,8 @@ import Home from "@/pages/Home";
 import Features from "@/pages/Features";
 import Security from "@/pages/Security";
 import Solutions from "@/pages/Solutions";
+import Venues from "@/pages/Venues";
+import BulkSign from "@/pages/BulkSign";
 import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
 import SignIn from "@/pages/SignIn";
@@ -41,6 +43,8 @@ function App() {
             <Route path="/features" element={<Features />} />
             <Route path="/security" element={<Security />} />
             <Route path="/solutions" element={<Solutions />} />
+            <Route path="/venues" element={<Venues />} />
+            <Route path="/bulk-sign" element={<BulkSign />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<SignIn />} />
