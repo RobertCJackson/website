@@ -59,7 +59,7 @@ Authoritative sources, in order:
 1. HubSpot for people, companies, deals, unsubscribe
 2. GitHub RobertCJackson/website for the marketing site
 3. The Notion/Drive page titled “Touch2Sign company brain” for ICP, pricing, legal line
-4. marketing/venues/ in the website repo (README, outreach-sequence, prospects.csv)
+4. marketing/venues/ in the website repo (README, outreach-sequence, prospects.csv, social-noise, campaigns.md)
 
 Do not keep a private shadow CRM in chat memory. If HubSpot and a spreadsheet disagree, HubSpot wins after you flag the mismatch.
 ```

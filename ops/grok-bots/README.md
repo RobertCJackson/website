@@ -1,6 +1,6 @@
 # Touch2Sign — Grok Bot roster
 
-Copy-paste setup for a founder running several jobs. **Create four ops bots, then Design** if you want a standing site/app review. Do not create the remaining “later” bots until that set has had a quiet, correct week.
+Copy-paste setup for a founder running several jobs. **Create four ops bots, then Design and/or Marketing** as you need reviews and a public drip. Do not create the remaining “later” bots until that set has had a quiet, correct week.
 
 All bots share **one Grok Bot computer** (logins, files, browser). That is not a security boundary. Safety lives in each bot’s **description**.
 
@@ -26,8 +26,9 @@ Company facts they must not invent:
 | 3 | Product | `03-product.md` | Day 1 after GitHub is connected |
 | 4 | Ops | `04-ops.md` | After 7 quiet CoS mornings, or sooner if Stripe is live |
 | 5 | Design | `05-design.md` | When you want a standing UX review of sites + app |
+| 6 | Marketing | `06-marketing.md` | LinkedIn posts, research, campaign drip (not HubSpot email) |
 | — | Group: Daily desk | `group-chat.md` | After 1–3 exist |
-| 6+ | Later | `05-later.md` | Support, Data, Legal GTM — not now |
+| 7+ | Later | `05-later.md` | Support, Data, Legal GTM — not now |
 
 ---
 
@@ -38,13 +39,13 @@ Company facts they must not invent:
 | Grok Bot app (Mac/Win + iOS) | You | The manager. Do not add another bot OS. |
 | Gmail (`hello@touch2sign.info` + personal) | CoS, GTM | Inbox, drafts. CoS triages; GTM drafts outreach. |
 | Google Calendar | CoS | Holds, walkthroughs, “what needs me today.” |
-| HubSpot | GTM, CoS (read) | Source of truth for venues pipeline. Import `prospects.csv`. |
-| GitHub | Product | PRs, CI, issues on `website`. |
+| HubSpot | GTM, CoS (read), Marketing (read later) | Pipeline vs post themes. GTM writes deals. |
+| GitHub | Product, Marketing (read), Design (read) | Site, `marketing/venues/` copy. |
 | Cursor Cloud Agents | Product | Actual code changes. Product bot delegates; it does not merge `main`. |
 | Notion **or** Google Drive (pick one) | All | Company brain: ICP, pricing, legal line, brand. |
 | Stripe | Ops | Failed payments, new subs. Read-only until trusted. |
 | Microsoft Clarity | GTM / Product / Design | Did anyone use the venues page. |
-| Browser (Grok computer) | Design, Ops | Click live pages; Design’s primary tool. |
+| Browser (Grok computer) | Design, Ops, Marketing | Click live pages; Marketing researches, does not publish. |
 | Mobbin MCP | Design | Optional reference for pricing / QR / check-in. |
 | Superdesign | Design | Optional mocks *after* a written review. |
 | Slack | Skip unless you live there | Email + Grok Bot is enough for a small team. |

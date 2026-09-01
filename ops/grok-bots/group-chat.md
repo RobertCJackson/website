@@ -4,7 +4,7 @@ Create after Chief of Staff, GTM, and Product exist.
 
 ## How
 
-New group chat → add **Chief of Staff**, **GTM**, **Product** (add **Ops** when it exists; add **Design** only while a P0 UX item is open). Pin it. This is the only chat you should need most mornings.
+New group chat → add **Chief of Staff**, **GTM**, **Product** (add **Ops** when it exists; **Marketing** if a post is waiting on you; **Design** only while a P0 UX item is open). Pin it. This is the only chat you should need most mornings.
 
 ### First message in the group
 
@@ -15,8 +15,9 @@ Chief of Staff chairs. Each weekday after the 08:00 brief, CoS posts in THIS cha
 1. What needs Robert today (named)
 2. GTM: replies / drafts waiting / do-not-send count
 3. Product: PRs / CI / blockers
-4. Ops: down or money (or “quiet”)
-5. One question max if something is ambiguous
+4. Marketing: this week’s posts waiting on “post” (or “quiet”)
+5. Ops: down or money (or “quiet”)
+6. One question max if something is ambiguous
 
 Rules:
 - Do not @ Robert for FYI. @ him only when a decision or approval is required (send, merge, pay).

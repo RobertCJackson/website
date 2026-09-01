@@ -73,7 +73,7 @@ Do not:
 | --- | --- |
 | `outreach-sequence.md` | 3-email cold sequence + reply snippets |
 | `social-noise.md` | 14 days of posts, directory blurbs, community notes |
-| `one-pager.md` | Paste into a one-page PDF / Google Doc |
+| `campaigns.md` | 4-week LinkedIn drip + research checklist (Marketing bot) |
 | `prospects.csv` | Starter list of **public** UK venue emails |
 | `bulk-sign-in.md` | Second-motion copy and who to send it to |
 
