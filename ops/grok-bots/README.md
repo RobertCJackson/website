@@ -1,6 +1,6 @@
 # Touch2Sign — Grok Bot roster
 
-Copy-paste setup for a founder running several jobs. **Create four ops bots, then Design and/or Marketing** as you need reviews and a public drip. Do not create the remaining “later” bots until that set has had a quiet, correct week.
+Copy-paste setup for a founder running several jobs. **Create four ops bots, then Design, Marketing, and/or Pricing** as you need reviews, a public drip, and a single pricebook. Do not create the remaining “later” bots until that set has had a quiet, correct week.
 
 All bots share **one Grok Bot computer** (logins, files, browser). That is not a security boundary. Safety lives in each bot’s **description**.
 
@@ -10,7 +10,7 @@ Company facts they must not invent:
 - Venues landing: https://touch2sign.info/venues/
 - Outreach inbox: `hello@touch2sign.info` — never send cold mail from the main signing domain.
 - Legal/product inbox: `hello@touch2sign.com`
-- Price (venues): Starter £5 / 250 forms, Standard £10 / 1,000, Scale £25. Not a POS. Solicitor owns wording.
+- Price (venues): Starter £5 / 250 forms, Standard £10 / 1,000, Scale £25. Not a POS. Solicitor owns wording. **Canonical book:** `ops/pricing/pricebook.md` (legal seat prices currently conflict in-repo).
 - Repo: `github.com/RobertCJackson/website` — branch work via Cursor Cloud Agents, not by YOLO-pushing to `main`.
 - Playbook on disk: `marketing/venues/` in that repo.
 
@@ -27,8 +27,9 @@ Company facts they must not invent:
 | 4 | Ops | `04-ops.md` | After 7 quiet CoS mornings, or sooner if Stripe is live |
 | 5 | Design | `05-design.md` | When you want a standing UX review of sites + app |
 | 6 | Marketing | `06-marketing.md` | LinkedIn posts, research, campaign drip (not HubSpot email) |
+| 7 | Pricing | `07-pricing.md` | Pricebook, packaging, competitor review (does not change Stripe) |
 | — | Group: Daily desk | `group-chat.md` | After 1–3 exist |
-| 7+ | Later | `05-later.md` | Support, Data, Legal GTM — not now |
+| 8+ | Later | `05-later.md` | Support, Data, Legal GTM — not now |
 
 ---
 
@@ -43,7 +44,7 @@ Company facts they must not invent:
 | GitHub | Product, Marketing (read), Design (read) | Site, `marketing/venues/` copy. |
 | Cursor Cloud Agents | Product | Actual code changes. Product bot delegates; it does not merge `main`. |
 | Notion **or** Google Drive (pick one) | All | Company brain: ICP, pricing, legal line, brand. |
-| Stripe | Ops | Failed payments, new subs. Read-only until trusted. |
+| Stripe | Ops (read), Pricing (read) | What is billed vs list. Ops does not set list price. |
 | Microsoft Clarity | GTM / Product / Design | Did anyone use the venues page. |
 | Browser (Grok computer) | Design, Ops, Marketing | Click live pages; Marketing researches, does not publish. |
 | Mobbin MCP | Design | Optional reference for pricing / QR / check-in. |

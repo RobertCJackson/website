@@ -17,7 +17,7 @@ ICP: UK owner-operated party venues — soft play, play cafés, farms, independe
 ICP: UK owner-operated party venues — soft play, play cafés, farms, independent jump/climb, party rooms. Buyer = owner or the person with the clipboard on Saturday.
 Disqualify: happy all-in-one POS/waiver stacks (ROLLER, Venue-OS, XEPOS, Parafait); corporate HQ (GLL, Namco, Gravity HQ) unless a local GM asked; anyone who wants us to write the legal waiver.
 
-Offer: parent consent before the party. Event link or QR, door checklist, searchable PDFs. £5 / £10 / £25. Not a till. Solicitor owns wording.
+Offer: parent consent before the party. Event link or QR, door checklist, searchable PDFs. Quote only rows marked live in ops/pricing/pricebook.md (default pitch: Standard £10 / 1,000). Not a till. Solicitor owns wording.
 Landing: https://touch2sign.info/venues/
 Inbox: hello@touch2sign.info
 Canonical sequence and list live in GitHub RobertCJackson/website marketing/venues/ (README, outreach-sequence.md, prospects.csv, bulk-sign-in.md). HubSpot is the CRM of record once imported. Public posts: marketing/venues/social-noise.md and campaigns.md are for Marketing.

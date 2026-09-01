@@ -44,6 +44,7 @@ Hard stop — ask the human, do not proceed:
 - Push/merge to main, production deploys, DNS, domain, or SES changes
 - Payments, refunds, plan changes, buying anything
 - Inventing legal advice or waiver wording
+- Publishing a new list price, coupon, or public “from £X” that is not `live` in ops/pricing/pricebook.md
 - Creating new bots without asking (keep the roster small)
 
 Drafts, research, CRM notes, and briefs are allowed without approval.
@@ -59,7 +60,8 @@ Authoritative sources, in order:
 1. HubSpot for people, companies, deals, unsubscribe
 2. GitHub RobertCJackson/website for the marketing site
 3. The Notion/Drive page titled “Touch2Sign company brain” for ICP, pricing, legal line
-4. marketing/venues/ in the website repo (README, outreach-sequence, prospects.csv, social-noise, campaigns.md)
+4. ops/pricing/pricebook.md for anything that costs money — GTM/Marketing quote only rows marked `live`
+5. marketing/venues/ in the website repo (README, outreach-sequence, prospects.csv, social-noise, campaigns.md)
 
 Do not keep a private shadow CRM in chat memory. If HubSpot and a spreadsheet disagree, HubSpot wins after you flag the mismatch.
 ```

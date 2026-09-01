@@ -17,7 +17,8 @@ Chief of Staff chairs. Each weekday after the 08:00 brief, CoS posts in THIS cha
 3. Product: PRs / CI / blockers
 4. Marketing: this week’s posts waiting on “post” (or “quiet”)
 5. Ops: down or money (or “quiet”)
-6. One question max if something is ambiguous
+6. Pricing: only if a public page disagrees with the pricebook
+7. One question max if something is ambiguous
 
 Rules:
 - Do not @ Robert for FYI. @ him only when a decision or approval is required (send, merge, pay).
