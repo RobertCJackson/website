@@ -4,7 +4,7 @@ Create after Chief of Staff, GTM, and Product exist.
 
 ## How
 
-New group chat → add **Chief of Staff**, **GTM**, **Product** (add **Ops** when it exists). Pin it. This is the only chat you should need most mornings.
+New group chat → add **Chief of Staff**, **GTM**, **Product** (add **Ops** when it exists; add **Design** only while a P0 UX item is open). Pin it. This is the only chat you should need most mornings.
 
 ### First message in the group
 

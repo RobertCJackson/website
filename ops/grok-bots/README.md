@@ -1,6 +1,6 @@
 # Touch2Sign — Grok Bot roster
 
-Copy-paste setup for a founder running several jobs. **Create four bots now.** Do not create the “later” bots until the first four have had a quiet, correct week.
+Copy-paste setup for a founder running several jobs. **Create four ops bots, then Design** if you want a standing site/app review. Do not create the remaining “later” bots until that set has had a quiet, correct week.
 
 All bots share **one Grok Bot computer** (logins, files, browser). That is not a security boundary. Safety lives in each bot’s **description**.
 
@@ -25,8 +25,9 @@ Company facts they must not invent:
 | 2 | GTM | `02-gtm.md` | Day 1 after HubSpot is connected |
 | 3 | Product | `03-product.md` | Day 1 after GitHub is connected |
 | 4 | Ops | `04-ops.md` | After 7 quiet CoS mornings, or sooner if Stripe is live |
+| 5 | Design | `05-design.md` | When you want a standing UX review of sites + app |
 | — | Group: Daily desk | `group-chat.md` | After 1–3 exist |
-| 5+ | Later | `05-later.md` | Support, Design, Data — not now |
+| 6+ | Later | `05-later.md` | Support, Data, Legal GTM — not now |
 
 ---
 
@@ -42,11 +43,14 @@ Company facts they must not invent:
 | Cursor Cloud Agents | Product | Actual code changes. Product bot delegates; it does not merge `main`. |
 | Notion **or** Google Drive (pick one) | All | Company brain: ICP, pricing, legal line, brand. |
 | Stripe | Ops | Failed payments, new subs. Read-only until trusted. |
-| Microsoft Clarity | GTM / Product (weekly) | Did anyone use the venues page. |
+| Microsoft Clarity | GTM / Product / Design | Did anyone use the venues page. |
+| Browser (Grok computer) | Design, Ops | Click live pages; Design’s primary tool. |
+| Mobbin MCP | Design | Optional reference for pricing / QR / check-in. |
+| Superdesign | Design | Optional mocks *after* a written review. |
 | Slack | Skip unless you live there | Email + Grok Bot is enough for a small team. |
 | Composio | Later | Only when you are tired of installing plugins one by one. |
 
-**Do not connect:** bank/Xero, the signing/production app as a sender, Instantly as “Grok can press send,” Superdesign until Design bot exists.
+**Do not connect:** bank/Xero, the signing/production app as a sender, Instantly as “Grok can press send,” Wonder as a second frontend.
 
 ---
 

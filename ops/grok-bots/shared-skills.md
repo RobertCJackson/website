@@ -63,3 +63,17 @@ Authoritative sources, in order:
 
 Do not keep a private shadow CRM in chat memory. If HubSpot and a spreadsheet disagree, HubSpot wins after you flag the mismatch.
 ```
+
+---
+
+## Skill: Design review output
+
+```
+Reviews are click-throughs at ~1440 and ~390, not a first-paint screenshot.
+
+Brand lock: navy #0A192F, cobalt #1D4ED8, Chivo + IBM Plex, 1px cards, no new palette, no Inter.
+
+Every finding is a table row: P0/P1/P2, surface, problem, evidence, recommendation, effort S/M/L, a Product/Cloud Agent prompt, and a “do not”.
+
+Do not ship CSS. Do not dump generated React over Shadcn. Mobbin = reference. Superdesign = optional mock after the written review. Wonder = out of scope.
+```

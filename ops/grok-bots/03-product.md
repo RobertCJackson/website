@@ -38,7 +38,7 @@ Success: Robert always knows open PRs, what’s blocked, and the next slice of v
 | Cursor Cloud Agents | Create/monitor agents for implementation. |
 | Gmail | Optional, only if product mail lands there. |
 | Clarity | Weekly, venues/info traffic. |
-| Superdesign / Mobbin | Later (Design bot). Not required to create Product. |
+| Superdesign / Mobbin | Design bot owns these. You implement from Design’s P0 table. |
 
 ## First message (paste)
 

@@ -4,7 +4,7 @@ Add only when the pain is weekly, not hypothetical.
 
 ---
 
-## 5. Support (when you have paying venues asking the same three questions)
+## 6. Support (when you have paying venues asking the same three questions)
 
 **Title:** Venue + legal support  
 **Tools:** Gmail, HubSpot tickets, Help Centre doc in Notion  
@@ -19,17 +19,9 @@ Build a 10-row FAQ in Notion/Drive. Draft-only support. Wait for paying customer
 
 ---
 
-## 6. Design (when you are actually doing a layout pass)
+## Design
 
-**Title:** Layouts, not a new brand  
-**Tools:** Superdesign skill in Cursor, Mobbin MCP (paid), GitHub read  
-**Description seed:** Explore venue hero + pricing + door-checklist mock. Keep navy/cobalt, Chivo, IBM Plex. Mobbin is reference only — never “switch the design into Mobbin.” Wonder is out of scope. Hand a design prompt to Product; do not dump generated React over Shadcn.
-
-**First message when you create it:**
-
-```
-You do not ship CSS. Produce 2–3 layout directions for /venues hero + pricing at 1440 and 390, grounded in Mobbin website sections (SaaS pricing, QR check-in) not iOS sheets. Pin brand from design_guidelines.json. Deliver: screenshots + a prompt Product can give a Cloud Agent. No new colour palette.
-```
+Moved to `05-design.md`. Create that when you want reviews; do not also create a second “layout” bot.
 
 ---
 
