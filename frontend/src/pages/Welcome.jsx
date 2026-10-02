@@ -9,6 +9,7 @@ import {
   Check,
   ChevronRight,
 } from "lucide-react";
+import { signflowLoginUrl, signflowPath } from "@/lib/signflow";
 
 /**
  * Touch2Sign — Post-Payment Welcome Page (Refresh Branding)
@@ -26,27 +27,42 @@ import {
  *      3. Replace `useLocation().search` with `useSearchParams()`.
  */
 
-// --- Plan catalogue (keep in sync with pricing page / Stripe products) ---
+// --- Plan catalogue (keep in sync with Pricing.jsx / Signflow checkout) ---
 const PLANS = {
-  personal_monthly: {
-    name: "Personal",
+  starter: {
+    name: "Starter",
     cadence: "billed monthly",
-    priceLabel: "£12 / month",
+    priceLabel: "£29 / user / month",
   },
-  personal_annual: {
-    name: "Personal",
+  starter_monthly: {
+    name: "Starter",
+    cadence: "billed monthly",
+    priceLabel: "£29 / user / month",
+  },
+  starter_annual: {
+    name: "Starter",
     cadence: "billed annually",
-    priceLabel: "£120 / year",
+    priceLabel: "£29 / user / month",
+  },
+  business: {
+    name: "Business",
+    cadence: "billed monthly",
+    priceLabel: "£69 / user / month",
   },
   business_monthly: {
     name: "Business",
     cadence: "billed monthly",
-    priceLabel: "£29 / seat / month",
+    priceLabel: "£69 / user / month",
   },
   business_annual: {
     name: "Business",
     cadence: "billed annually",
-    priceLabel: "£290 / seat / year",
+    priceLabel: "£69 / user / month",
+  },
+  enterprise: {
+    name: "Enterprise",
+    cadence: "annual contract",
+    priceLabel: "Custom",
   },
 };
 
@@ -63,25 +79,27 @@ const NEXT_STEPS = [
     icon: FileSignature,
     title: "Send your first document",
     body: "Upload a PDF and route it for signature in under two minutes.",
-    href: "/documents/new",
+    href: signflowPath("/documents"),
+    external: true,
     cta: "Start a send",
   },
   {
     icon: Sparkles,
     title: "Meet Sentinel AI",
     body: "Ask questions about any signed document — risks, obligations, renewal dates.",
-    href: "/sentinel",
-    cta: "Open Sentinel",
+    href: signflowPath("/"),
+    external: true,
+    cta: "Open Signflow",
   },
   {
     icon: Users,
     title: "Bring your team in",
     body: "Invite colleagues at no extra cost. Unlimited seats on Business.",
-    href: "/settings/team",
+    href: signflowPath("/settings"),
+    external: true,
     cta: "Invite team",
   },
 ];
-
 // --- Brand mark: shield with sig-tick, refresh palette ---
 const ShieldMark = ({ size = 44 }) => (
   <svg
@@ -162,7 +180,8 @@ const Seal = () => {
         margin: "0 auto 28px",
         transform: mounted ? "scale(1)" : "scale(0.92)",
         opacity: mounted ? 1 : 0,
-        transition: "transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 420ms ease-out",
+        transition:
+          "transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 420ms ease-out",
       }}
       aria-hidden="true"
     >
@@ -194,7 +213,8 @@ const IncludedCard = ({ plan }) => (
       border: "1px solid rgba(28,26,22,0.09)",
       borderRadius: 16,
       padding: "26px 28px 22px",
-      boxShadow: "0 1px 2px rgba(28,26,22,0.03), 0 8px 24px -16px rgba(28,26,22,0.08)",
+      boxShadow:
+        "0 1px 2px rgba(28,26,22,0.03), 0 8px 24px -16px rgba(28,26,22,0.08)",
     }}
     aria-labelledby="included-title"
   >
@@ -343,31 +363,27 @@ const IncludedCard = ({ plan }) => (
 const NextStepCard = ({ step }) => {
   const [hover, setHover] = useState(false);
   const Icon = step.icon;
-  return (
-    <Link
-      to={step.href}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      data-testid={`next-step-${step.title.toLowerCase().replace(/\s+/g, "-")}`}
-      style={{
-        textDecoration: "none",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        gap: 20,
-        background: "#ffffff",
-        border: "1px solid rgba(28,26,22,0.09)",
-        borderRadius: 14,
-        padding: "22px 22px 20px",
-        minHeight: 190,
-        transform: hover ? "translateY(-2px)" : "translateY(0)",
-        boxShadow: hover
-          ? "0 12px 32px -16px rgba(28,26,22,0.18)"
-          : "0 1px 2px rgba(28,26,22,0.03)",
-        transition: "transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease",
-        borderColor: hover ? "rgba(45,90,39,0.35)" : "rgba(28,26,22,0.09)",
-      }}
-    >
+  const cardStyle = {
+    textDecoration: "none",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    gap: 20,
+    background: "#ffffff",
+    border: "1px solid rgba(28,26,22,0.09)",
+    borderRadius: 14,
+    padding: "22px 22px 20px",
+    minHeight: 190,
+    transform: hover ? "translateY(-2px)" : "translateY(0)",
+    boxShadow: hover
+      ? "0 12px 32px -16px rgba(28,26,22,0.18)"
+      : "0 1px 2px rgba(28,26,22,0.03)",
+    transition:
+      "transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease",
+    borderColor: hover ? "rgba(45,90,39,0.35)" : "rgba(28,26,22,0.09)",
+  };
+  const content = (
+    <>
       <div>
         <div
           style={{
@@ -429,12 +445,35 @@ const NextStepCard = ({ step }) => {
           }}
         />
       </div>
+    </>
+  );
+  const sharedProps = {
+    onMouseEnter: () => setHover(true),
+    onMouseLeave: () => setHover(false),
+    "data-testid": `next-step-${step.title.toLowerCase().replace(/\s+/g, "-")}`,
+    style: cardStyle,
+  };
+  if (step.external) {
+    return (
+      <a href={step.href} {...sharedProps}>
+        {content}
+      </a>
+    );
+  }
+  return (
+    <Link to={step.href} {...sharedProps}>
+      {content}
     </Link>
   );
 };
-
 const TrustStrip = () => {
-  const items = ["eIDAS", "SES · AES · QES", "UK ECA 2000", "SCCR audit", "GDPR"];
+  const items = [
+    "eIDAS",
+    "SES · AES · QES",
+    "UK ECA 2000",
+    "SCCR audit",
+    "GDPR",
+  ];
   return (
     <div
       style={{
@@ -478,8 +517,10 @@ const Welcome = () => {
   const location = useLocation();
   const plan = useMemo(() => {
     const params = new URLSearchParams(location.search);
-    const key = params.get("plan") || "personal_annual";
-    return PLANS[key] || PLANS.personal_annual;
+    const raw = (params.get("plan") || "starter").toLowerCase();
+    const billing = (params.get("billing") || "").toLowerCase();
+    const compound = billing && !raw.includes("_") ? `${raw}_${billing}` : raw;
+    return PLANS[compound] || PLANS[raw] || PLANS.starter;
   }, [location.search]);
 
   // Inject DM Serif Display + DM Sans (safe if already present)
@@ -524,8 +565,8 @@ const Welcome = () => {
         }}
       >
         <BrandLockup />
-        <Link
-          to="/signin"
+        <a
+          href={signflowLoginUrl()}
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 13,
@@ -536,8 +577,11 @@ const Welcome = () => {
             gap: 6,
           }}
         >
-          Not you? <span style={{ color: "#1c1a16", fontWeight: 600 }}>Switch account</span>
-        </Link>
+          Not you?{" "}
+          <span style={{ color: "#1c1a16", fontWeight: 600 }}>
+            Switch account
+          </span>
+        </a>
       </header>
 
       {/* Hero */}
@@ -585,8 +629,8 @@ const Welcome = () => {
           >
             {plan.name}
           </em>{" "}
-          plan is active — everything is unlocked and ready to use. A receipt is on its
-          way to your inbox.
+          plan is active — everything is unlocked and ready to use. A receipt is
+          on its way to your inbox.
         </p>
 
         {/* Primary CTAs */}
@@ -599,8 +643,8 @@ const Welcome = () => {
             marginTop: 32,
           }}
         >
-          <Link
-            to="/dashboard"
+          <a
+            href={signflowPath("/")}
             onMouseEnter={() => setPrimaryHover(true)}
             onMouseLeave={() => setPrimaryHover(false)}
             data-testid="welcome-cta-primary"
@@ -621,11 +665,12 @@ const Welcome = () => {
               boxShadow: primaryHover
                 ? "0 12px 24px -12px rgba(45,90,39,0.55)"
                 : "0 6px 16px -10px rgba(45,90,39,0.45)",
-              transition: "background 180ms ease, box-shadow 180ms ease, transform 180ms ease",
+              transition:
+                "background 180ms ease, box-shadow 180ms ease, transform 180ms ease",
               transform: primaryHover ? "translateY(-1px)" : "translateY(0)",
             }}
           >
-            Open your dashboard
+            Open Signflow
             <ArrowRight
               size={16}
               strokeWidth={2.2}
@@ -634,9 +679,9 @@ const Welcome = () => {
                 transition: "transform 180ms ease",
               }}
             />
-          </Link>
-          <Link
-            to="/documents/new"
+          </a>
+          <a
+            href={signflowPath("/documents")}
             onMouseEnter={() => setSecondaryHover(true)}
             onMouseLeave={() => setSecondaryHover(false)}
             data-testid="welcome-cta-secondary"
@@ -653,7 +698,7 @@ const Welcome = () => {
             }}
           >
             or send your first document
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -693,7 +738,7 @@ const Welcome = () => {
               What's next
             </div>
             <Link
-              to="/help"
+              to="/contact"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 12,
@@ -735,15 +780,16 @@ const Welcome = () => {
         }}
       >
         Need a VAT receipt or to change your plan?{" "}
-        <Link
-          to="/settings/billing"
+        <a
+          href={signflowPath("/settings")}
           style={{ color: "#4a4540", textDecoration: "underline" }}
         >
           Manage billing
-        </Link>
+        </a>
         .
         <br />
-        Touch2Sign Ltd · Registered in England &amp; Wales · touch2sign.com · touch2sign.co.uk
+        Touch2Sign Ltd · Registered in England &amp; Wales · touch2sign.com ·
+        touch2sign.co.uk
       </footer>
     </main>
   );
