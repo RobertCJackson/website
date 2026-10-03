@@ -9,9 +9,9 @@ const Footer = () => (
         <div className="lg:col-span-2">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
-            UK-compliant eSignatures and remote deed witnessing on a single
-            platform. Built for solicitors, conveyancers, and enterprise teams
-            that need trusted, auditable digital signing.
+            UK-compliant eSignatures, remote deed witnessing, and venue
+            disclaimers on a single platform. Built for solicitors, activity
+            venues, and teams that need trusted, auditable digital signing.
           </p>
           <div className="mt-6 flex items-center gap-3">
             <a
@@ -49,6 +49,8 @@ const Footer = () => (
             <li><Link to="/features" className="text-slate-700 hover:text-blue-700">Features</Link></li>
             <li><Link to="/security" className="text-slate-700 hover:text-blue-700">Security &amp; Compliance</Link></li>
             <li><Link to="/solutions" className="text-slate-700 hover:text-blue-700">Solutions</Link></li>
+            <li><Link to="/venues" className="text-slate-700 hover:text-blue-700">Venue Disclaimers</Link></li>
+            <li><Link to="/bulk-sign" className="text-slate-700 hover:text-blue-700">Bulk sign-in</Link></li>
             <li><Link to="/pricing" className="text-slate-700 hover:text-blue-700">Pricing</Link></li>
           </ul>
         </div>

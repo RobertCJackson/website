@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  ShieldCheck,
   FileSignature,
   Fingerprint,
   Workflow,
@@ -13,6 +12,8 @@ import {
   Users,
   Handshake,
   Home as HomeIcon,
+  PartyPopper,
+  Send,
   ArrowRight,
   CheckCircle2,
   Lock,
@@ -77,12 +78,14 @@ const STEPS = [
 ];
 
 const SOLUTIONS = [
-  { icon: Scale, title: "Solicitors & Legal", body: "Deed witnessing, engagement letters, statutory declarations." },
-  { icon: HomeIcon, title: "Conveyancing", body: "TR1 transfers, mortgage deeds, and remote witnessing." },
-  { icon: Building2, title: "Estate Agents", body: "Tenancy agreements, offer letters, memorandum of sale." },
-  { icon: Handshake, title: "Accountants", body: "Engagement letters, HMRC authorisations, filings." },
-  { icon: Users, title: "HR Onboarding", body: "Offers, contracts, right-to-work, policy acknowledgements." },
-  { icon: FileSignature, title: "Client Agreements", body: "MSAs, SOWs, DPAs — signed, sealed, and archived." },
+  { icon: Scale, title: "Solicitors & Legal", body: "Deed witnessing, engagement letters, statutory declarations.", href: "/solutions" },
+  { icon: HomeIcon, title: "Conveyancing", body: "TR1 transfers, mortgage deeds, and remote witnessing.", href: "/solutions" },
+  { icon: Building2, title: "Estate Agents", body: "Tenancy agreements, offer letters, memorandum of sale.", href: "/solutions" },
+  { icon: Handshake, title: "Accountants", body: "Engagement letters, HMRC authorisations, filings.", href: "/solutions" },
+  { icon: Users, title: "HR Onboarding", body: "Offers, contracts, right-to-work, policy acknowledgements.", href: "/solutions" },
+  { icon: FileSignature, title: "Client Agreements", body: "MSAs, SOWs, DPAs — signed, sealed, and archived.", href: "/solutions" },
+  { icon: PartyPopper, title: "Party venues", body: "Parent disclaimers by QR or event link — from £10/month.", href: "/venues" },
+  { icon: Send, title: "Bulk sign-in", body: "One template, a guest list, signed PDFs back in a folder.", href: "/bulk-sign" },
 ];
 
 const Home = () => (
@@ -310,20 +313,17 @@ const Home = () => (
           Solutions
         </p>
         <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-          Built for UK legal, property &amp; finance teams
+          Built for UK legal, property, venues &amp; ops teams
         </h2>
         <p className="mt-4 text-slate-600">
-          Every workflow — from statutory declarations to HR onboarding — sealed
-          with an SCCR audit certificate.
+          Every workflow — from statutory declarations to birthday-party
+          disclaimers — sealed with an SCCR audit certificate.
         </p>
       </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {SOLUTIONS.map((s) => (
-          <div
-            key={s.title}
-            className="group flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-blue-300"
-            data-testid={`solution-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
-          >
+        {SOLUTIONS.map((s) => {
+          const inner = (
+            <>
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-100">
               <s.icon className="h-5 w-5" />
             </div>
@@ -333,8 +333,21 @@ const Home = () => (
               </div>
               <p className="mt-1 text-sm text-slate-600">{s.body}</p>
             </div>
-          </div>
-        ))}
+            </>
+          );
+          const className =
+            "group flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-blue-300";
+          const testId = `solution-${s.title.toLowerCase().replace(/\s+/g, "-")}`;
+          return s.href ? (
+            <Link key={s.title} to={s.href} className={className} data-testid={testId}>
+              {inner}
+            </Link>
+          ) : (
+            <div key={s.title} className={className} data-testid={testId}>
+              {inner}
+            </div>
+          );
+        })}
       </div>
     </section>
 

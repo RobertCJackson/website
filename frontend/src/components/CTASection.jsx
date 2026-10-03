@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+const isExternal = (href) =>
+  href.startsWith("http") || href.startsWith("mailto:");
+
+const CtaLink = ({ href, testId, className, children }) =>
+  isExternal(href) ? (
+    <a href={href} data-testid={testId} className={className}>
+      {children}
+    </a>
+  ) : (
+    <Link to={href} data-testid={testId} className={className}>
+      {children}
+    </Link>
+  );
+
 const CTASection = ({
   title = "Ready to transform how you sign?",
   subtitle = "Book a live demo with our team, or explore a sandbox account tailored to your use case.",
@@ -23,18 +37,18 @@ const CTASection = ({
           <p className="mt-4 text-base text-slate-300">{subtitle}</p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <Link to={primaryHref} data-testid="cta-primary">
+          <CtaLink href={primaryHref} testId="cta-primary">
             <Button className="rounded-md bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-100">
               {primaryLabel}
             </Button>
-          </Link>
-          <Link
-            to={secondaryHref}
+          </CtaLink>
+          <CtaLink
+            href={secondaryHref}
+            testId="cta-secondary"
             className="rounded-md border border-slate-700 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-slate-500"
-            data-testid="cta-secondary"
           >
             {secondaryLabel}
-          </Link>
+          </CtaLink>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import { Mail, Phone, MapPin, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,46 @@ import { submitDemoRequest } from "@/lib/api";
 
 const TEAM_SIZES = ["1–10", "11–50", "51–200", "201–1,000", "1,000+"];
 
+const USE_CASES = [
+  { value: "venues", label: "Venue disclaimers / parent consent" },
+  { value: "bulk", label: "Bulk sign-in documents" },
+  { value: "legal", label: "Legal / deed witnessing" },
+  { value: "hr", label: "HR / onboarding" },
+  { value: "other", label: "Something else" },
+];
+
+const COPY = {
+  venues: {
+    title: "See Venue Disclaimers on your next party.",
+    subtitle:
+      "Fifteen minutes. We’ll walk the event link, QR, and door checklist — no hard sell.",
+    placeholder:
+      "Tell us your venue type (soft play, farm, jump zone, party room), roughly how many parties a month, and whether parents currently sign on paper.",
+    cta: "Book my walkthrough",
+  },
+  bulk: {
+    title: "Send us a sample form and a headcount.",
+    subtitle:
+      "We’ll tell you if bulk sign-in is the fit — or if you need the full legal platform.",
+    placeholder:
+      "What form are you sending (consent, induction, hire terms…), roughly how many people, and how you collect signatures today.",
+    cta: "Send my sample",
+  },
+};
+
+const DEFAULT_COPY = {
+  title: "See Touch2Sign on your documents.",
+  subtitle:
+    "Tell us a little about your team and we'll set up a 30-minute walk-through — including remote deed witnessing on a sample TR1 if that's useful.",
+  placeholder:
+    "Tell us what you'd like to see — deed witnessing, HR onboarding, venue disclaimers, bulk send…",
+  cta: "Book my demo",
+};
+
 const Contact = () => {
+  const [params] = useSearchParams();
+  const initialUseCase = params.get("use_case") || "";
+  const copy = COPY[initialUseCase] || DEFAULT_COPY;
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -24,6 +64,7 @@ const Contact = () => {
     team_size: "",
     phone: "",
     message: "",
+    use_case: initialUseCase,
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -65,12 +106,10 @@ const Contact = () => {
             Book a demo
           </p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            See Touch2Sign on your documents.
+            {copy.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-slate-600">
-            Tell us a little about your team and we&apos;ll set up a 30-minute
-            walk-through — including remote deed witnessing on a sample TR1 if
-            that&apos;s useful.
+            {copy.subtitle}
           </p>
         </div>
       </section>
@@ -168,7 +207,31 @@ const Contact = () => {
                       </SelectContent>
                     </Select>
                   </div>
-                  <div className="sm:col-span-2">
+                  <div>
+                    <Label htmlFor="use_case">What do you need?</Label>
+                    <Select
+                      value={form.use_case || undefined}
+                      onValueChange={(v) =>
+                        setForm((f) => ({ ...f, use_case: v }))
+                      }
+                    >
+                      <SelectTrigger
+                        id="use_case"
+                        className="mt-1.5"
+                        data-testid="demo-form-use-case"
+                      >
+                        <SelectValue placeholder="Select a use case" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {USE_CASES.map((s) => (
+                          <SelectItem key={s.value} value={s.value}>
+                            {s.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
                     <Label htmlFor="phone">Phone (optional)</Label>
                     <Input
                       id="phone"
@@ -185,7 +248,7 @@ const Contact = () => {
                       id="message"
                       value={form.message}
                       onChange={handleChange("message")}
-                      placeholder="Tell us what you'd like to see — deed witnessing, HR onboarding, integrations…"
+                      placeholder={copy.placeholder}
                       rows={4}
                       className="mt-1.5"
                       data-testid="demo-form-message"
@@ -210,7 +273,7 @@ const Contact = () => {
                         Submitting…
                       </span>
                     ) : (
-                      "Book my demo"
+                      copy.cta
                     )}
                   </Button>
                 </div>
@@ -233,11 +296,20 @@ const Contact = () => {
                   <div>
                     <div className="font-semibold text-slate-900">Email</div>
                     <a
-                      href="mailto:hello@touch2sign.com"
+                      href="mailto:hello@touch2sign.info"
                       className="text-slate-600 hover:text-blue-700"
                     >
-                      hello@touch2sign.com
+                      hello@touch2sign.info
                     </a>
+                    <div className="mt-1 text-xs text-slate-500">
+                      Venue &amp; outreach enquiries. Legal / product:{" "}
+                      <a
+                        href="mailto:hello@touch2sign.com"
+                        className="text-blue-700"
+                      >
+                        hello@touch2sign.com
+                      </a>
+                    </div>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

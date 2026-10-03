@@ -1,0 +1,47 @@
+company,segment,town,website,email,phone,priority,source,notes,status
+Rascals Softplay,party_soft_play,Epsom,https://rascalssoftplay.co.uk/,hello@rascalssoftplay.co.uk,07880 213062,1,venue website contact page,"Under-5s exclusive party hire from £240. Secondary email rascalsplaycafe@gmail.com — prefer hello@. Owner-op ICP.",new
+Jabberwocky Soft Play,party_soft_play,Haddington,https://jabberwockysoftplay.co.uk/,hello@jabberwockysoftplay.co.uk,01620 248070,1,venue party page,"Also bookings@jabberwockysoftplay.co.uk. Exclusive-use parties. Verify site (WP was flaky when checked).",new
+Treasure Chest Indoor Play,party_soft_play,Crawley,https://www.treasurechestindoorplay.co.uk/,parties@treasurechestindoorplay.co.uk,01293 549009,1,exclusive hire booking page,"Dedicated party bookings inbox. Exclusive hire + adventure play parties. Strong ICP.",new
+Welcome to the Jungle Soft Play,party_soft_play,Harlow,https://www.welcometothejunglesoftplay.co.uk/,bookings@welcometothejunglesoftplay.com,01279 745671,1,party booking page,"Private hire up to 60 children. Also admin@welcometothejunglesoftplay.com for extra hours — start with bookings@.",new
+Jungle Boogie,party_soft_play,Walsall,https://www.jungleboogie.co.uk/,jungleboogiewalsall@hotmail.com,01922 664369,1,private hire page,"Family-run (opened 2024). Parties from £15.95pp + exclusive hire. Hotmail inbox — still public. Alt number 01922 336389 listed on older page.",new
+Tiny Town Play Cafe,party_soft_play,UK,https://www.tinytownplaycafe.co.uk/,hello@tinytownplaycafe.co.uk,,1,party bookings page,"Sunday parties only; under-5s. Also listed hellotinytown@outlook.com — use hello@ first. Site may be Cloudflare-gated.",new
+The Soft Play Cafe Birmingham,party_soft_play,Birmingham,https://thesoftplaycafebirmingham.co.uk/,info@thesoftplaycafebirmingham.co.uk,07454 280650,1,homepage,"Stirchley. Weekend private slots. Independent play café — core ICP.",new
+Halo Play Café,party_soft_play,Uxbridge,https://haloplaycafe.co.uk/,bookings@haloplaycafe.co.uk,,2,booking FAQ,"Charity play café (Halo Children’s Foundation). Parties from ~£180. Confirm email on site before send — some pages obfuscate it. Tone: extra gentle.",new
+Play Central / Crate17,party_soft_play,London,https://www.crate17.co.uk/,Hello@crate17.co.uk,,2,soft play T&Cs page,"Also bookings@17foodhall.co.uk. Private hire + party bookings. Food-hall venue — still does parent T&Cs.",new
+Macaroni Penguin,party_soft_play,London,https://www.macaroni-penguin.co.uk/,royalwharf@macaroni-penguin.co.uk,,2,site scrape,"Royal Wharf site email captured. Battersea Power Station also has a site — confirm which location before send.",new
+Conifox Adventure Park,farm_attraction,Kirkliston,https://www.conifox.co.uk/,adventurepark@conifox.co.uk,,1,contact scrape,"Indoor activity + outdoor park. VIP birthday packages. Farm/attraction ICP.",new
+High Ash Farm,farm_attraction,Norfolk,https://www.highashfarm.co.uk/,info@highashfarm.co.uk,,1,homepage,"Farm attraction. Confirm they host parties / school visits before email 2.",new
+Odds Farm Park,farm_attraction,High Wycombe,https://www.oddsfarm.co.uk/,main@oddsfarm.co.uk,,1,contact page,"Family farm park. Parties + school trips — good bulk-sign overlap.",new
+Airpark Adventure,party_soft_play,Glasgow,https://www.airparkadventure.co.uk/,airpark@thedaimlerfoundation.co.uk,,2,homepage,"Soft play + party room. Charity/foundation email — check relationship before a hard pitch.",new
+Clip n Climb Cambridge,jump_climb,Cambridge,https://www.clipnclimb.co.uk/,hello@clipnclimbcambridge.co.uk,,2,network contact page,"Independent franchisee. Parties + parent waivers. Do not email FRANCHISE@ HQ.",new
+Clip n Climb Reading,jump_climb,Reading,https://www.clipnclimb.co.uk/,hello@clipnclimbreading.co.uk,,2,network contact page,Independent franchisee. Same motion as Cambridge.,new
+Clip n Climb Chelsea,jump_climb,London,https://www.clipnclimb.co.uk/,enquiries@clipnclimbchelsea.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Stockton,jump_climb,Stockton,https://www.clipnclimb.co.uk/,enquiries@clipnclimbstockton.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Weston,jump_climb,Weston-super-Mare,https://www.clipnclimb.co.uk/,enquiries.weston@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Leeds,jump_climb,Leeds,https://www.clipnclimb.co.uk/,hello.leeds@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Bicester,jump_climb,Bicester,https://www.clipnclimb.co.uk/,info@clipnclimbbicester.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Blackpool,jump_climb,Blackpool,https://www.clipnclimb.co.uk/,info@clipnclimbblackpool.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Braintree,jump_climb,Braintree,https://www.clipnclimb.co.uk/,info@clipnclimbbraintree.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Colchester,jump_climb,Colchester,https://www.clipnclimb.co.uk/,info@clipnclimbcolchester.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Derby,jump_climb,Derby,https://www.clipnclimb.co.uk/,info@clipnclimbderby.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Dundonald,jump_climb,Dundonald,https://www.clipnclimb.co.uk/,info@clipnclimbdundonald.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Garforth,jump_climb,Garforth,https://www.clipnclimb.co.uk/,info@clipnclimbgarforth.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Ilkley,jump_climb,Ilkley,https://www.clipnclimb.co.uk/,info@clipnclimbilkley.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Ipswich,jump_climb,Ipswich,https://www.clipnclimb.co.uk/,info@clipnclimbipswich.com,,2,network contact page,Independent franchisee.,new
+Clip n Climb Newcastle,jump_climb,Newcastle,https://www.clipnclimb.co.uk/,info@clipnclimbnewcastle.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Nottingham,jump_climb,Nottingham,https://www.clipnclimb.co.uk/,info@clipnclimbnottingham.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Plymouth,jump_climb,Plymouth,https://www.clipnclimb.co.uk/,info@clipnclimbplymouth.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Stoke,jump_climb,Stoke,https://www.clipnclimb.co.uk/,info@clipnclimbstoke.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Tonbridge,jump_climb,Tonbridge,https://www.clipnclimb.co.uk/,info@clipnclimbtonbridge.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Crawley,jump_climb,Crawley,https://www.clipnclimb.co.uk/,info.crawley@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Croydon,jump_climb,Croydon,https://www.clipnclimb.co.uk/,info.croydon@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Gloucester,jump_climb,Gloucester,https://www.clipnclimb.co.uk/,info.gloucester@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Halifax,jump_climb,Halifax,https://www.clipnclimb.co.uk/,info.halifax@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb Northampton,jump_climb,Northampton,https://www.clipnclimb.co.uk/,info.northampton@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Clip n Climb The O2,jump_climb,London,https://www.clipnclimb.co.uk/,info.theo2@clipnclimb.co.uk,,3,network contact page,"High-footfall site — may already have a park OS. Lower priority.",new
+Clip n Climb Wandsworth,jump_climb,London,https://www.clipnclimb.co.uk/,info.wandsworth@clipnclimb.co.uk,,2,network contact page,Independent franchisee.,new
+Jump Street,jump_climb,UK,https://www.clipnclimb.co.uk/,INFO@JUMPSTREET.CO.UK,,2,listed on Clip n Climb contact map,"Trampoline / jump adjacent. Confirm still independent before send.",new
+Out of Bounds,jump_climb,UK,https://www.clipnclimb.co.uk/,info@out-of-bounds.co.uk,,2,listed on Clip n Climb contact map,Climbing / activity. Confirm party volume.,new
+Summit Up Climbing,jump_climb,UK,https://www.clipnclimb.co.uk/,info@summitupclimbing.com,,2,listed on Clip n Climb contact map,Climbing centre. Parent waiver + party overlap.,new
+Bloc Climbing,jump_climb,UK,https://www.clipnclimb.co.uk/,info@blocclimbing.co.uk,,3,listed on Clip n Climb contact map,Likely more climbing-gym than kids party — optional.,new
+Wonder World Kirkcaldy,party_soft_play,Kirkcaldy,https://www.wonderworldsoftplay.co.uk/kirkcaldy/parties/,customerservice@wonderworldgroup.co.uk,01592 802343,3,party page,"Group customer-service inbox — more chain-like. Lower priority than owner-ops.",new

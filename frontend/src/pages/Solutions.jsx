@@ -7,6 +7,8 @@ import {
   FileSignature,
   Briefcase,
   Landmark,
+  PartyPopper,
+  Send,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTASection from "@/components/CTASection";
@@ -59,6 +61,21 @@ const CASES = [
     title: "Finance & Lending",
     body: "Loan agreements, guarantor forms, and mandate letters with QES-grade assurance.",
     highlights: ["eIDAS QES ready", "AML-friendly evidence", "Escrow on completion"],
+    href: "/contact",
+  },
+  {
+    icon: PartyPopper,
+    title: "Party venues & activity centres",
+    body: "Parent consent before the party starts. Event link or walk-in QR, door checklist, searchable signed PDFs — from £10/month.",
+    highlights: ["Soft play, farms, jump zones, party rooms", "Guest list + live signed status", "Not a POS — keep ROLLER"],
+    href: "/venues",
+  },
+  {
+    icon: Send,
+    title: "Bulk sign-in documents",
+    body: "Send one simple form to a list — school trips, volunteer packs, contractor induction, hire terms. Info and signature back in a folder.",
+    highlights: ["CSV / list send", "Reminders for the unsigned", "Export answers + signed PDFs"],
+    href: "/bulk-sign",
   },
 ];
 
@@ -93,10 +110,10 @@ const Solutions = () => (
                 <c.icon className="h-5 w-5" />
               </div>
               <Link
-                to="/contact"
+                to={c.href || "/contact"}
                 className="text-xs font-semibold text-blue-700 hover:text-blue-800"
               >
-                Talk to us →
+                {c.href && c.href !== "/contact" ? "See this flow →" : "Talk to us →"}
               </Link>
             </div>
             <h3 className="mt-6 font-display text-xl font-bold text-slate-900">
